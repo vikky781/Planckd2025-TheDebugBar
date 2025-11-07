@@ -11,6 +11,7 @@ Please follow the instructions below **carefully** to ensure your submission is 
    `Planckd2025-<TeamName>`
    As an example, the fork made by team Qubiteers should look like `Planckd2025-<Qubiteers>`
 3. **Do NOT modify or remove any of the existing top-level folders.**
+4. Submission should be made by only one of the team members.
 
 Your work must be placed **only** inside the `submission/` directory.
 
