@@ -1,0 +1,30 @@
+name: ci
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    - name: Install
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r Planckd2025/Submission/code/requirements.txt
+    - name: Smoke CNN
+      run: |
+        python Planckd2025/Submission/code/train.py --task mnist --model cnn --epochs 1 --batch-size 128 --subset-train 512 --subset-test 256 --out Planckd2025/Submission/results/cnn_ci
+    - name: Smoke SVM
+      run: |
+        python Planckd2025/Submission/code/train.py --task mnist --model svm --out Planckd2025/Submission/results/svm_ci --subset-train 512 --subset-test 256
+    - name: Smoke VQA
+      run: |
+        python Planckd2025/Submission/code/train.py --task mnist --model vqa --epochs 1 --batch-size 128 --subset-train 256 --subset-test 128 --out Planckd2025/Submission/results/vqa_ci --cpu
+    - name: Summarize
+      run: |
+        python Planckd2025/Submission/code/eval.py --runs Planckd2025/Submission/results/cnn_ci Planckd2025/Submission/results/svm_ci Planckd2025/Submission/results/vqa_ci --out Planckd2025/Submission/results/summary_ci

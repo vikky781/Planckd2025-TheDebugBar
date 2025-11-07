@@ -1,29 +1,22 @@
 # Planck'd 2025 Hackathon
 
-Please follow the instructions below **carefully** to ensure your submission is evaluated correctly.
-
----
+Please follow the instructions below to ensure your submission is evaluated correctly.
 
 ## Submission Instructions
 
-1. Make a new repository in your GitHub account.
-2. **Rename your repository** to the following format:
-   `Planckd2025-<TeamName>`
-   As an example, the repository made by team Qubiteers should look like `Planckd2025-Qubiteers`
-3. Submission should be made by only one of the team members. Submission form will be opened soon.
-
-<!--Your work must be placed **only** inside the `submission/` directory.-->
+1. Create a new repository in your GitHub account.
+2. Name it using: Planckd2025-<TeamName>
+3. One team member submits the repository link in the form.
 
 ## Submission Folder Structure
 
-Inside your repository, place all final work in the following format:
+Place all final work under Submission/ in this format:
 
-<!--submission/ <br>-->
-code/ # Notebooks, scripts, trained models, etc.<br>
-results/ # Plots, tables, logs, generated samples, etc. (optional)<br>
-report.pdf # Final PDF report (required)<br>
-README.md # Summary + team details (required)<br>
+code/
+results/
+report.pdf
+README.md
 
 ## Final Report
 
-Report should contain the team name and the names of all the team members. Submitted code should be clear and reproducable, with instructions to run the code added in the report.
+Include team name and member details. Ensure code is reproducible and include run instructions.

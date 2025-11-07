@@ -1,0 +1,11 @@
+numpy
+scipy
+pillow
+matplotlib
+scikit-learn
+torch
+torchvision
+pennylane
+pennylane-lightning
+reportlab
+pandas
