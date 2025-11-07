@@ -27,4 +27,5 @@ Reproducibility
 - Set --subset-train and --subset-test for quick runs; remove to run full MNIST
 
 Team
-- Fill in team name, member names, and Discord usernames here
+- Team name: The Debug Bar
+- Member names and Discord usernames: <fill here>
